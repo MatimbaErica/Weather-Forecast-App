@@ -82,3 +82,6 @@ main {
 .weather-app-temperature-container {
   display: flex;
 }
+a {
+  color: #41c0c0;
+}

@@ -10,58 +10,66 @@
       href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Patrick+Hand&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather Forecast App</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
-          <input type="search" placeholder="Enter a City....." required  class="search-form-input"/>
-          <input type="submit" placeholder="Search" class="search-form-button" />
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a City....."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <input
+            type="submit"
+            placeholder="Search"
+            class="search-form-button"
+          />
         </form>
       </header>
       <main>
         <div class="weather-app-data">
-        <h1 class="weather-app-city">Manila</h1>
-        <p class="weather-app-details">
-          Friday 12:45, Clear with periodic clouds
-          <br />
-          Humidity:<strong>  72%</strong>, Wind:<strong>3km/h</strong>
-        </p>
-        <div class="weather-app-temperature-container">
-          
-          
-          
-          
-          <div class="weather-app-icon">🌤️</div>
-          
-          
-          <div class="weather-app-temperature">31</div>
-          
-         <div class="weather-app-unit"> &deg;C</div>
-        
-        
-        
+          <div>
+            <h1 class="weather-app-city" id="city">Manila</h1>
+            <p class="weather-app-details">
+              <span id="time">Saturday 23:34</span>,
+              <span id="description">Clear with periodic clouds</span>
+              <br />
+              Humidity: <strong id="humidity">60%</strong>, Wind:<strong
+                id="wind-speed"
+                >4.4km/h</strong
+              >
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon">🌤️</div>
+            <div class="weather-app-temperature" id="temperature">31</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
       </main>
+
+      <footer>
+        This project was coded by<a
+          href="https://github.com/MatimbaErica"
+          target="_blank"
+          >Erica Mbiti</a
+        >,is
+        <a
+          href="https://github.com/MatimbaErica/Weather-Forecast-App"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://weder-application.netlify.app/" target="_blank"
+          >hosted on Netifly</a
+        >
+      </footer>
     </div>
-  </div>
-    <footer>
-      This project was coded by<a
-        href="https://github.com/MatimbaErica"
-        target="_blank"
-        >Erica Mbiti</a
-      >,is
-      <a
-        href="https://github.com/MatimbaErica/Weather-Forecast-App"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://weder-application.netlify.app/" target="_blank"
-        >hosted on Netifly</a
-      >
-    </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
